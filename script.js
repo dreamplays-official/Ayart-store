@@ -210,3 +210,14 @@ if(year){
 year.innerHTML=new Date().getFullYear();
 
 }
+/* ===== Mobile Menu ===== */
+
+const menu=document.querySelector(".menu-btn");
+
+const nav=document.querySelector("nav");
+
+menu.onclick=()=>{
+
+nav.classList.toggle("active");
+
+}
