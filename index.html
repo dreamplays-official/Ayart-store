@@ -1,230 +1,1004 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AYART STORE | Original Handmade Paintings</title>
-
-<meta name="description"
-content="Buy Original Handmade Paintings, Pencil Sketches, Landscapes and Spiritual Artwork from AYART STORE.">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
+  <title>AYART STORE · Luxury Original Art</title>
+  <!-- SEO Meta -->
+  <meta name="description" content="AYART STORE – original handmade art, no AI, no prints. Explore Lord Ganesha, Radha Krishna, landscapes, portraits, abstracts." />
+  <link rel="canonical" href="https://ayartstudio01.online" />
+  <meta property="og:title" content="AYART STORE · Original Art Gallery" />
+  <meta property="og:description" content="Every artwork is handcrafted with passion. No AI. No Prints. Only Original Paintings." />
+  <meta property="og:image" content="https://ayartstudio01.online/assets/og-image.jpg" />
+  <meta property="og:url" content="https://ayartstudio01.online" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AYART STORE",
+      "url": "https://ayartstudio01.online",
+      "logo": "https://ayartstudio01.online/assets/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-6397188182",
+        "contactType": "Sales"
+      }
+    }
+  </script>
+  <style>
+    /* ----- RESET & BASE ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #ffffff;
+      color: #1a1a1a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: #0f0f0f;
+      color: #f0f0f0;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* ----- GLASS & GOLD ACCENT ----- */
+    .gold {
+      color: #C89B3C;
+    }
+    .gold-bg {
+      background: #C89B3C;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    }
+    body.dark .glass {
+      background: rgba(20, 20, 20, 0.6);
+      border-color: rgba(255, 215, 150, 0.15);
+    }
+    /* ----- BUTTONS ----- */
+    .btn-gold {
+      display: inline-block;
+      background: #C89B3C;
+      color: #fff;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 60px;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(200, 155, 60, 0.25);
+    }
+    .btn-gold:hover {
+      background: #b0882e;
+      transform: scale(1.02);
+      box-shadow: 0 12px 28px rgba(200, 155, 60, 0.35);
+    }
+    .btn-outline-gold {
+      background: transparent;
+      border: 1.5px solid #C89B3C;
+      color: #C89B3C;
+      padding: 10px 28px;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .btn-outline-gold:hover {
+      background: #C89B3C;
+      color: #fff;
+    }
+    /* ----- HEADER / NAV ----- */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+    body.dark nav {
+      border-bottom-color: rgba(255, 255, 255, 0.04);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .logo span {
+      color: #C89B3C;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #C89B3C;
+      transition: width 0.25s;
+    }
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,0.03);
+      border-radius: 40px;
+      padding: 0 16px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    body.dark .search-wrap {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.06);
+    }
+    .search-wrap input {
+      border: none;
+      background: transparent;
+      padding: 10px 6px;
+      font-size: 0.9rem;
+      outline: none;
+      width: 140px;
+      color: inherit;
+    }
+    .search-wrap input::placeholder {
+      color: #999;
+    }
+    .dark-toggle {
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0 4px;
+      color: inherit;
+    }
+    /* ----- HERO ----- */
+    .hero {
+      padding: 60px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 4.2rem;
+      font-weight: 700;
+      letter-spacing: -2px;
+      line-height: 1.05;
+    }
+    .hero h1 .gold {
+      display: inline-block;
+      position: relative;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.7;
+      margin: 24px 0 32px;
+      max-width: 480px;
+    }
+    .hero-slider {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+      aspect-ratio: 4/3;
+      background: #f5f0eb;
+    }
+    body.dark .hero-slider {
+      background: #1f1f1f;
+    }
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .slider-track img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    /* ----- SECTION TITLE ----- */
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -1px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title span {
+      background: #C89B3C;
+      width: 8px;
+      height: 40px;
+      display: inline-block;
+      border-radius: 20px;
+    }
+    /* ----- CARDS / COLLECTION ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 32px;
+      margin: 40px 0 60px;
+    }
+    .art-card {
+      background: #fafaf8;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.15, 0.75, 0.4, 1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid rgba(0,0,0,0.02);
+      position: relative;
+      cursor: pointer;
+    }
+    body.dark .art-card {
+      background: #181818;
+      border-color: #2a2a2a;
+    }
+    .art-card:hover {
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 30px 50px rgba(0,0,0,0.07);
+    }
+    .art-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      background: #ece8e2;
+    }
+    .art-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .art-card:hover .art-img img {
+      transform: scale(1.04);
+    }
+    .badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: #C89B3C;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 40px;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(4px);
+    }
+    .badge.original {
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      left: auto;
+      right: 16px;
+    }
+    .wishlist {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 40px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      color: #1a1a1a;
+    }
+    .wishlist:hover {
+      background: #C89B3C;
+      color: #fff;
+    }
+    .art-info {
+      padding: 20px 20px 24px;
+    }
+    .art-info h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .art-info .price {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 8px 0 12px;
+      color: #C89B3C;
+    }
+    .rating {
+      color: #C89B3C;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      transition: 0.2s;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .btn-wa:hover {
+      background: #1ebc5a;
+      transform: scale(1.02);
+    }
+    /* ----- FILTERS ----- */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 10px;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid #ddd;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+      color: inherit;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #C89B3C;
+      border-color: #C89B3C;
+      color: #fff;
+    }
+    /* ----- ABOUT / CONTACT ----- */
+    .about-section, .contact-section {
+      padding: 60px 0;
+      border-top: 1px solid rgba(0,0,0,0.03);
+    }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.8rem;
+    }
+    /* ----- FOOTER ----- */
+    footer {
+      padding: 40px 0 20px;
+      border-top: 1px solid rgba(0,0,0,0.03);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    footer a {
+      opacity: 0.6;
+      transition: 0.2s;
+    }
+    footer a:hover {
+      opacity: 1;
+    }
+    /* ----- FLOATING BUTTONS ----- */
+    .float-wa, .float-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #25D366;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: 0.25s;
+      z-index: 999;
+    }
+    .float-top {
+      bottom: 100px;
+      background: #1a1a1a;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      font-size: 1.6rem;
+    }
+    body.dark .float-top {
+      background: #f0f0f0;
+      color: #1a1a1a;
+    }
+    .float-wa:hover, .float-top:hover {
+      transform: scale(1.06);
+    }
+    /* ----- ARTWORK DETAIL PAGE (Overlay) ----- */
+    .detail-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(20px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    .detail-overlay.open {
+      display: flex;
+    }
+    .detail-card {
+      background: #fff;
+      border-radius: 32px;
+      max-width: 1000px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px;
+      position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+      animation: detailFade 0.4s ease;
+    }
+    body.dark .detail-card {
+      background: #1a1a1a;
+      color: #f0f0f0;
+    }
+    @keyframes detailFade {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .detail-close {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-size: 2.4rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #1a1a1a;
+      transition: 0.3s;
+      z-index: 10;
+    }
+    body.dark .detail-close {
+      color: #f0f0f0;
+    }
+    .detail-close:hover {
+      transform: rotate(90deg);
+      color: #C89B3C;
+    }
+    .detail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      max-height: 500px;
+    }
+    .detail-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .detail-info h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+    .detail-info .price {
+      font-size: 2rem;
+      color: #C89B3C;
+      font-weight: 700;
+    }
+    .detail-info .category {
+      display: inline-block;
+      background: rgba(200,155,60,0.15);
+      color: #C89B3C;
+      padding: 4px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      align-self: flex-start;
+    }
+    .detail-info .description {
+      opacity: 0.7;
+      line-height: 1.7;
+      margin: 8px 0;
+    }
+    .detail-info .btn-wa {
+      align-self: flex-start;
+      padding: 14px 40px;
+      font-size: 1.1rem;
+    }
+    .detail-info .meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding-top: 16px;
+      margin-top: 8px;
+    }
+    body.dark .detail-info .meta {
+      border-top-color: rgba(255,255,255,0.06);
+    }
+    .detail-info .meta span {
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+    .detail-info .meta strong {
+      display: block;
+      font-weight: 600;
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .detail-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+        max-height: 95vh;
+      }
+      .detail-img {
+        max-height: 300px;
+      }
+      .detail-info h2 {
+        font-size: 1.8rem;
+      }
+    }
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .nav-links {
+        gap: 16px;
+        font-size: 0.85rem;
+      }
+      .search-wrap input {
+        width: 100px;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.4rem; }
+      .card-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .container { padding: 0 16px; }
+      .nav-links { gap: 10px; }
+    }
+    /* scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* loader */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      transition: opacity 0.7s;
+    }
+    body.dark #loader {
+      background: #0f0f0f;
+    }
+    #loader.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .loader-ring {
+      border: 6px solid rgba(200,155,60,0.15);
+      border-top-color: #C89B3C;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
 </head>
-
 <body>
-
-<header>
-
-<div class="logo">
-AYART <span>STORE</span>
-</div>
-
-<input
-type="text"
-id="search"
-placeholder="Search Artwork...">
-
-<div class="menu-btn">
-
-☰
-
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#gallery">Gallery</a>
-
-<a href="#">Categories</a>
-
-<a href="#">About</a>
-
-<a href="#">Blog</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-</header>
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>
-
-Own Original Art.
-
-</h1>
-
-<p>
-
-Every artwork is handcrafted with passion.
-
-No AI.
-
-No Prints.
-
-Only Original Paintings.
-
-</p>
-
-<a class="btn" href="#gallery">
-
-Explore Collection
-
-</a>
-
-</div>
-
-</section>
-
-<section class="features">
-
-<div class="card">
-
-<h2>🎨 Handmade</h2>
-
-<p>
-
-Every artwork is made by hand.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>🚚 Pan India</h2>
-
-<p>
-
-Safe Delivery.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>⭐ Premium</h2>
-
-<p>
-
-Original Collection.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2 class="title">
-
-Featured Artworks
-
-</h2>
-
-<div class="gallery">
-
-<div class="item">
-
-<img src="images/ganesha.jpg">
-
-<h3>Lord Ganesha</h3>
-
-<p>₹1200</p>
-
-<a class="buy"
-
-href="https://wa.me/916397188182?text=Hello%20AYART%20STORE,%20I%20want%20to%20buy%20Lord%20Ganesha%20Painting%20(₹1200).">
-
-Buy on WhatsApp
-
-</a>
-
-</div>
-
-<div class="item">
-
-<img src="images/radha.jpg">
-
-<h3>Radha Krishna</h3>
-
-<p>₹700</p>
-
-<a class="buy"
-
-href="https://wa.me/916397188182?text=Hello%20AYART%20STORE,%20I%20want%20to%20buy%20Radha%20Krishna%20Painting%20(₹700).">
-
-Buy on WhatsApp
-
-</a>
-
-</div>
-
-<div class="item">
-
-<img src="images/landscape.jpg">
-
-<h3>Landscape</h3>
-
-<p>₹500</p>
-
-<a class="buy"
-
-href="https://wa.me/916397188182?text=Hello%20AYART%20STORE,%20I%20want%20to%20buy%20Landscape%20Painting%20(₹500).">
-
-Buy on WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>
-
-AYART STORE
-
-</h2>
-
-<p>
-
-Original Handmade Artwork
-
-</p>
-
-<p>
-
-📞 6397188182
-
-</p>
-
-<p>
-
-🌐 ayartstudio01.online
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  <!-- LOADER -->
+  <div id="loader"><div class="loader-ring"></div></div>
+
+  <!-- ARTWORK DETAIL OVERLAY -->
+  <div class="detail-overlay" id="detailOverlay">
+    <div class="detail-card" id="detailCard">
+      <button class="detail-close" id="detailClose">&times;</button>
+      <img class="detail-img" id="detailImg" src="" alt="artwork" />
+      <div class="detail-info" id="detailInfo">
+        <h2 id="detailTitle">Artwork Title</h2>
+        <span class="category" id="detailCategory">Category</span>
+        <div class="price" id="detailPrice">₹0</div>
+        <p class="description" id="detailDesc">Handcrafted original painting. No AI. No prints. Only original artwork with passion and soul.</p>
+        <div class="meta">
+          <span><strong>Medium</strong> Acrylic on Canvas</span>
+          <span><strong>Size</strong> 24" x 36"</span>
+          <span><strong>Year</strong> 2024</span>
+        </div>
+        <button class="btn-wa" id="detailWaBtn">Buy on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN WRAP -->
+  <div class="container">
+    <!-- HEADER -->
+    <nav>
+      <div class="logo">AYART<span>.</span></div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#spiritual">Spiritual</a>
+        <a href="#sketches">Sketches</a>
+        <a href="#paintings">Paintings</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="search-wrap">
+          <input type="text" id="liveSearch" placeholder="Search art..." />
+          <span style="opacity:0.4;">🔍</span>
+        </div>
+        <button class="dark-toggle" id="darkToggle" aria-label="dark mode">🌓</button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Own <span class="gold">Original</span> Art.</h1>
+          <p>Every artwork is handcrafted with passion. No AI. No Prints. Only Original Paintings.</p>
+          <a href="#gallery" class="btn-gold">Explore Collection</a>
+        </div>
+        <div class="hero-slider">
+          <div class="slider-track" id="sliderTrack">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=400&fit=crop" alt="art 1" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=600&h=400&fit=crop" alt="art 2" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=600&h=400&fit=crop" alt="art 3" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER + GALLERY -->
+    <div id="gallery">
+      <div class="section-title"><span></span> Featured Collection</div>
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="spiritual">Spiritual</button>
+        <button class="filter-btn" data-filter="landscape">Landscape</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <button class="filter-btn" data-filter="sketch">Sketch</button>
+        <button class="filter-btn" data-filter="modern">Modern</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+      </div>
+      <div class="card-grid" id="artGrid"></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section reveal">
+      <div class="section-title"><span></span> About AYART</div>
+      <div style="max-width:600px;">
+        <p style="font-size:1.2rem; font-weight:300;">Original Handmade Art · Made in India</p>
+        <p style="opacity:0.7; margin-top:12px;">Every brushstroke tells a story. We curate original paintings, sketches, and spiritual art from talented Indian artists. No reproductions, only soulful originals.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section reveal">
+      <div class="section-title"><span></span> Connect</div>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Phone</strong> <br /> <a href="tel:+916397188182">+91 6397188182</a></p>
+          <p style="margin-top:12px;"><strong>Email</strong> <br /> <a href="mailto:hello@ayartstudio01.online">hello@ayartstudio01.online</a></p>
+        </div>
+        <div class="social-icons">
+          <a href="https://instagram.com/ayartstudio" target="_blank">📸</a>
+          <a href="https://wa.me/916397188182?text=Hello%20AYART%20STORE" target="_blank">💬</a>
+          <a href="https://ayartstudio01.online" target="_blank">🌐</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>© 2026 AYART STORE · Made with ❤️ in India</div>
+      <div>
+        <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/916397188182?text=Hello%20AYART%20STORE" target="_blank" class="float-wa" aria-label="WhatsApp">💬</a>
+  <button class="float-top" id="scrollTopBtn" aria-label="scroll to top">↑</button>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    (function() {
+      // ---- ARTWORK DATA with ORIGINAL IMAGE NAMES ----
+      const artworks = [
+        { 
+          id:1, 
+          title:'Lord Ganesha', 
+          price:1200, 
+          category:'spiritual', 
+          img:'ganesha-watercolour.png',
+          description: 'Beautiful watercolour painting of Lord Ganesha. Handcrafted with devotion and intricate details. Perfect for spiritual spaces.'
+        },
+        { 
+          id:2, 
+          title:'Radha Krishna', 
+          price:700, 
+          category:'spiritual', 
+          img:'radhekrishna.png',
+          description: 'Ethereal portrayal of Radha Krishna in vibrant colours. This original artwork captures divine love and grace.'
+        },
+        { 
+          id:3, 
+          title:'Landscape', 
+          price:500, 
+          category:'landscape', 
+          img:'landscape.jpg',
+          description: 'Serene landscape painting with majestic mountains and calm waters. Brings peace and nature\'s beauty to your walls.'
+        },
+        { 
+          id:4, 
+          title:'Leopard', 
+          price:1000, 
+          category:'modern', 
+          img:'Leopard.png',
+          description: 'Stunning modern artwork featuring a leopard. Bold strokes and powerful composition make this a statement piece.'
+        },
+        { 
+          id:5, 
+          title:'Shakespeare', 
+          price:800, 
+          category:'portrait', 
+          img:'shakespeare.png',
+          description: 'Classic portrait of William Shakespeare. Rendered with rich textures and timeless elegance for literature lovers.'
+        },
+        { 
+          id:6, 
+          title:'Hanuman', 
+          price:1200, 
+          category:'spiritual', 
+          img:'hanuman.png',
+          description: 'Dynamic portrait of Lord Hanuman. This artwork radiates strength, devotion, and spiritual energy.'
+        },
+        { 
+          id:7, 
+          title:'Abstract', 
+          price:2000, 
+          category:'abstract', 
+          img:'ganesha-abstract.png',
+          description: 'Abstract interpretation of Ganesha. Modern, vibrant, and full of energy. A unique contemporary art piece.'
+        },
+        { 
+          id:8, 
+          title:'Portrait', 
+          price:550, 
+          category:'portrait', 
+          img:'potrait1.jpg',
+          description: 'Elegant portrait with delicate shading and expressive features. A timeless addition to any art collection.'
+        }
+      ];
+
+      const grid = document.getElementById('artGrid');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const searchInput = document.getElementById('liveSearch');
+      
+      // Detail overlay elements
+      const detailOverlay = document.getElementById('detailOverlay');
+      const detailClose = document.getElementById('detailClose');
+      const detailImg = document.getElementById('detailImg');
+      const detailTitle = document.getElementById('detailTitle');
+      const detailCategory = document.getElementById('detailCategory');
+      const detailPrice = document.getElementById('detailPrice');
+      const detailDesc = document.getElementById('detailDesc');
+      const detailWaBtn = document.getElementById('detailWaBtn');
+      let currentDetailArt = null;
+
+      function openDetail(artwork) {
+        currentDetailArt = artwork;
+        detailImg.src = artwork.img;
+        detailImg.alt = artwork.title;
+        detailTitle.textContent = artwork.title;
+        detailCategory.textContent = artwork.category.charAt(0).toUpperCase() + artwork.category.slice(1);
+        detailPrice.textContent = `₹${artwork.price}`;
+        detailDesc.textContent = artwork.description || 'Handcrafted original painting. No AI. No prints. Only original artwork with passion and soul.';
+        detailWaBtn.dataset.title = artwork.title;
+        detailWaBtn.dataset.price = `₹${artwork.price}`;
+        detailOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDetail() {
+        detailOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      detailClose.addEventListener('click', closeDetail);
+      detailOverlay.addEventListener('click', function(e) {
+        if (e.target === this) closeDetail();
+      });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+      // Detail WA button
+      detailWaBtn.addEventListener('click', function() {
+        const title = this.dataset.title;
+        const price = this.dataset.price;
+        const msg = `Hello AYART STORE,\nI want to buy\nArtwork: ${title}\nPrice: ${price}\nPlease guide me.`;
+        window.open(`https://wa.me/916397188182?text=${encodeURIComponent(msg)}`, '_blank');
+      });
+
+      function renderCards(filter = 'all', query = '') {
+        const filtered = artworks.filter(a => {
+          const matchCat = filter === 'all' || a.category === filter;
+          const matchQuery = a.title.toLowerCase().includes(query.toLowerCase()) || a.category.includes(query.toLowerCase());
+          return matchCat && matchQuery;
+        });
+        grid.innerHTML = filtered.map(a => `
+          <div class="art-card" data-id="${a.id}" data-category="${a.category}">
+            <div class="art-img">
+              <img src="${a.img}" alt="${a.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x400/C89B3C/FFFFFF?text=${a.title}'" />
+              <span class="badge">⭐ Original</span>
+              <span class="badge original">Only 1 left</span>
+              <button class="wishlist" aria-label="wishlist">♡</button>
+            </div>
+            <div class="art-info">
+              <h3>${a.title}</h3>
+              <div class="rating">★★★★★</div>
+              <div class="price">₹${a.price}</div>
+              <button class="btn-wa" data-title="${a.title}" data-price="₹${a.price}">Buy on WhatsApp</button>
+            </div>
+          </div>
+        `).join('');
+
+        // Attach click for detail view (entire card)
+        document.querySelectorAll('.art-card').forEach(card => {
+          const id = parseInt(card.dataset.id);
+          const artwork = artworks.find(a => a.id === id);
+          if (artwork) {
+            card.addEventListener('click', function(e) {
+              // Don't open detail if clicking on WA button or wishlist
+              if (e.target.closest('.btn-wa') || e.target.closest('.wishlist')) return;
+              openDetail(artwork);
+            });
+          }
+        });
+
+        // Attach WA buttons
+        document.querySelectorAll('.btn-wa').forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const title = this.dataset.title;
+            const price = this.dataset.price;
+            const msg = `Hello AYART STORE,\nI want to buy\nArtwork: ${title}\nPrice: ${price}\nPlease guide me.`;
+            window.open(`https://wa.me/916397188182?text=${encodeURIComponent(msg)}`, '_blank');
+          });
+        });
+
+        // Wishlist buttons
+        document.querySelectorAll('.wishlist').forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.textContent = this.textContent === '♡' ? '♥' : '♡';
+            this.style.color = this.textContent === '♥' ? '#C89B3C' : '';
+          });
+        });
+      }
+
+      // Filter
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+          renderCards(filter, searchInput.value);
+        });
+      });
+
+      // Live search
+      searchInput.addEventListener('input', function() {
+        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+        renderCards(activeFilter, this.value);
+      });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold:0.2 });
+      reveals.forEach(r => observer.observe(r));
+
+      // Scroll top
+      document.getElementById('scrollTopBtn').addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+      // Dark mode
+      const darkToggle = document.getElementById('darkToggle');
+      darkToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('dark', document.body.classList.contains('dark'));
+      });
+      if (localStorage.getItem('dark') === 'true') document.body.classList.add('dark');
+
+      // Hero slider
+      let slideIndex = 0;
+      const track = document.getElementById('sliderTrack');
+      if (track) {
+        const slides = track.children;
+        setInterval(() => {
+          slideIndex = (slideIndex + 1) % slides.length;
+          track.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }, 4000);
+      }
+
+      // Loader
+      window.addEventListener('load', () => {
+        document.getElementById('loader').classList.add('hide');
+      });
+
+      // initial render
+      renderCards('all', '');
+    })();
+  </script>
 </body>
 </html>
